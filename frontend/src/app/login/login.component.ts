@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { signal } from '@angular/core'; // Import the signal function
+import { signal } from '@angular/core'; 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -24,7 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  errorMessage = signal(''); // Using signal to track error message
+  errorMessage = signal(''); 
 
   constructor(private http: HttpClient, private router: Router, private fb: FormBuilder) {
     this.loginForm = this.fb.group({
@@ -35,7 +35,7 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.invalid) {
-      // Set a general error message if the form is invalid
+
       this.errorMessage.set('Please fix the errors in the form before submitting.');
       return;
     }

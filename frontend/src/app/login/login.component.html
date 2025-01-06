@@ -1,7 +1,7 @@
 <div class="login-container">
   <h2>Login</h2>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
-    <!-- Email Field -->
+    
     <mat-form-field appearance="fill" class="form-group">
       <mat-label>Email</mat-label>
       <input
@@ -21,7 +21,7 @@
       </mat-error>
     </mat-form-field>
 
-    <!-- Password Field -->
+    
     <mat-form-field appearance="fill" class="form-group">
       <mat-label>Password</mat-label>
       <input
@@ -38,7 +38,7 @@
       </mat-error>
     </mat-form-field>
 
-    <!-- Submit Button -->
+    
     <button
       mat-raised-button
       color="primary"
@@ -50,7 +50,7 @@
     </button>
   </form>
 
-  <!-- Error Message -->
+  
   <p *ngIf="errorMessage()" class="error-message">
     {{ errorMessage() }}
   </p>

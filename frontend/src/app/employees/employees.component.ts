@@ -3,7 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-import { signal } from '@angular/core'; // Import the signal function
+import { signal } from '@angular/core'; 
 import { PageLayoutComponent } from '../page-layout/page-layout.component';
 @Component({
   selector: 'app-employees',
@@ -13,7 +13,7 @@ import { PageLayoutComponent } from '../page-layout/page-layout.component';
   styleUrls: ['./employees.component.scss'],
 })
 export class EmployeesComponent implements OnInit {
-  employees = signal<any[]>([]); // Signal to hold the list of employees
+  employees = signal<any[]>([]); // Signal to track employee list
   errorMessage = signal(''); // Signal to track error message
   loading = signal(true); // Signal to track loading state
 

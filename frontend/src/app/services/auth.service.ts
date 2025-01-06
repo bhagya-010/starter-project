@@ -16,14 +16,14 @@ export class AuthService {
   }
 
   getToken(): string | null {
-    if (isPlatformBrowser(this.platformId)) { // Ensure this code runs only in the browser
+    if (isPlatformBrowser(this.platformId)) { 
       return localStorage.getItem('token');
     }
     return null;
   }
 
   setToken(token: string): void {
-    if (isPlatformBrowser(this.platformId)) { // Ensure this code runs only in the browser
+    if (isPlatformBrowser(this.platformId)) { 
       localStorage.setItem('token', token);
     }
   }

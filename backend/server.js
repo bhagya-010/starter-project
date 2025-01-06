@@ -12,7 +12,6 @@ const PORT = process.env.PORT || 3000;
 
 const JWT_SECRET = 'secretkey';
 
-// Middleware to authenticate JWT tokens
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
@@ -71,7 +70,7 @@ app.get('/employee/:id', authenticateToken, (req, res) => {
     });
 });
 
-// Login route with express-validator
+
 app.post('/login', [
     body('email').isEmail().withMessage('Invalid email address').trim().normalizeEmail(),
     body('password').notEmpty().withMessage('Password is required').trim()
