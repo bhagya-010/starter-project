@@ -1,0 +1,17 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  mat-toolbar {
+    position: sticky;
+    top: 0;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+  }
+  
+  mat-sidenav-content {
+    padding: 20px;
+  }
+  

@@ -1,0 +1,29 @@
+<!-- <app-page-layout> -->
+  <div class="container">
+    <h2>Employee Details</h2>
+    <div *ngIf="employee()">
+      <div class="card">
+        <div class="card-header">
+          <h3>{{ employee().employee_name }}</h3>
+          <p><strong>ID:</strong> {{ employee().id }}</p>
+        </div>
+        <div class="card-body">
+          <div class="details">
+            <div class="detail-item">
+              <strong>Name:</strong> {{ employee().employee_name }}
+            </div>
+            <div class="detail-item">
+              <strong>Salary:</strong> {{ employee().employee_salary | currency }}
+            </div>
+            <div class="detail-item">
+              <strong>Age:</strong> {{ employee().employee_age }}
+            </div>
+          </div>
+          <div class="profile-image">
+            <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1736159499~exp=1736163099~hmac=2e09f9e27d053db92ecbf19b1aa604eafd2629d10d540287f8a9d454c4310caf&w=1380" alt="Profile Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+<!-- </app-page-layout> -->
